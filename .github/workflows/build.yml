@@ -19,7 +19,7 @@ jobs:
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@main
         with:
           repository: openstack/designate
-          ref: 035453ffd1ba0f574a1d7f23b458222c0fd8fc68
+          ref: bbb241f89620faa6d99ec98f78d77ca4dd32417a
 
       - uses: vexxhost/docker-atmosphere/.github/actions/build-image@main
         with:
