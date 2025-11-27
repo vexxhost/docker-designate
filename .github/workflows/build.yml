@@ -16,12 +16,12 @@ jobs:
       id-token: write
       packages: write
     steps:
-      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@main
+      - uses: vexxhost/docker-atmosphere/.github/actions/checkout@2023.1
         with:
           repository: openstack/designate
-          ref: 035453ffd1ba0f574a1d7f23b458222c0fd8fc68
+          ref: ff1986cbb755f0d74a7db98623d6d17816d933a6
 
-      - uses: vexxhost/docker-atmosphere/.github/actions/build-image@main
+      - uses: vexxhost/docker-atmosphere/.github/actions/build-image@2023.1
         with:
           image-name: designate
           build-contexts: designate=openstack/designate
