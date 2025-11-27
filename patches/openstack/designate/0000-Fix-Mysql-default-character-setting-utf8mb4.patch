@@ -17,10 +17,10 @@ Change-Id: I7232b55300c8817a00e73e449e03ea6103f40701
  .../alembic/versions/15b34ff3ecb8_fix_service_charset.py    | 6 ++++--
  1 file changed, 4 insertions(+), 2 deletions(-)
 
-diff --git a/designate/storage/sqlalchemy/alembic/versions/15b34ff3ecb8_fix_service_charset.py b/designate/storage/sqlalchemy/alembic/versions/15b34ff3ecb8_fix_service_charset.py
+diff --git a/designate/storage/impl_sqlalchemy/alembic/versions/15b34ff3ecb8_fix_service_charset.py b/designate/storage/impl_sqlalchemy/alembic/versions/15b34ff3ecb8_fix_service_charset.py
 index 07212b0c..0a6cfef7 100644
---- a/designate/storage/sqlalchemy/alembic/versions/15b34ff3ecb8_fix_service_charset.py
-+++ b/designate/storage/sqlalchemy/alembic/versions/15b34ff3ecb8_fix_service_charset.py
+--- a/designate/storage/impl_sqlalchemy/alembic/versions/15b34ff3ecb8_fix_service_charset.py
++++ b/designate/storage/impl_sqlalchemy/alembic/versions/15b34ff3ecb8_fix_service_charset.py
 @@ -43,6 +43,8 @@ def upgrade() -> None:
          return
 
@@ -34,3 +34,5 @@ index 07212b0c..0a6cfef7 100644
 +    op.execute('ALTER DATABASE DEFAULT CHARACTER SET utf8mb4;')
 --
 2.25.1
+
+
