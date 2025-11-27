@@ -34,3 +34,4 @@ index 07212b0c..0a6cfef7 100644
 +    op.execute('ALTER DATABASE DEFAULT CHARACTER SET utf8mb4;')
 --
 2.25.1
+
