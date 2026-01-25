@@ -8,7 +8,7 @@ uv pip install \
         /src/designate
 EOF
 
-FROM ghcr.io/vexxhost/python-base:2025.1@sha256:3cfb69c08fa228d7a68331f08bfeee2ff570f7eed190c301a89dacb36ff1a292
+FROM ghcr.io/vexxhost/python-base:2025.1@sha256:ceac7dca50150b63e46b4fb42956a1cae1a4f145f25e73428af56d5131ceb49d
 RUN \
     groupadd -g 42424 designate && \
     useradd -u 42424 -g 42424 -M -d /var/lib/designate -s /usr/sbin/nologin -c "Designate User" designate && \
