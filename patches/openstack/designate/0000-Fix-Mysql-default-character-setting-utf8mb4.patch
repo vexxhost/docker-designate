@@ -24,12 +24,12 @@ index 07212b0c..0a6cfef7 100644
 @@ -43,6 +43,8 @@ def upgrade() -> None:
          return
 
-     op.execute('SET foreign_key_checks = 0;')
+     op.execute('SET foreign_key_checks = 0')
 -    op.execute('ALTER TABLE service_statuses CONVERT TO CHARACTER SET utf8;')
 +    op.execute(
 +        'ALTER TABLE service_statuses CONVERT TO CHARACTER SET utf8mb4;'
 +    )
-     op.execute('SET foreign_key_checks = 1;')
+     op.execute('SET foreign_key_checks = 1')
 -    op.execute('ALTER DATABASE DEFAULT CHARACTER SET utf8;')
 +    op.execute('ALTER DATABASE DEFAULT CHARACTER SET utf8mb4;')
 --
