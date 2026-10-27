@@ -20,7 +20,7 @@ jobs:
       - uses: vexxhost/docker-atmosphere/.github/actions/checkout@c2a2333f668bfbf131bd2a7aa8c387be80f0ea85 # main
         with:
           repository: openstack/designate
-          ref: 0f45fd7510259716747e8fc30d945ca86e9175cb # stable/2025.2
+          ref: 83001680d5248b17c8b758af7b65cad0ead2d5fa # stable/2025.2
 
       - uses: vexxhost/docker-atmosphere/.github/actions/build-image@c2a2333f668bfbf131bd2a7aa8c387be80f0ea85 # main
         with:
