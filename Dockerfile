@@ -1,14 +1,14 @@
 # SPDX-FileCopyrightText: © 2025 VEXXHOST, Inc.
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-FROM ghcr.io/vexxhost/openstack-venv-builder:2025.2@sha256:55159cd1d3c9830635eb77ea4f8f3b07ff48086d418906192b574bc00b4dda02 AS build
+FROM ghcr.io/vexxhost/openstack-venv-builder:2025.2@sha256:5baef4d68fe11f572440f4520a2c2d8fde95a6b1e74a9d6580ad451d3e5043f9 AS build
 RUN --mount=type=bind,from=designate,source=/,target=/src/designate,readwrite <<EOF bash -xe
 uv pip install \
     --constraint /upper-constraints.txt \
         /src/designate
 EOF
 
-FROM ghcr.io/vexxhost/python-base:2025.2@sha256:f2ca2efa8aacd4791fa3a6225e22ee8349a9546e07bf41703bab85f52fcd90fd
+FROM ghcr.io/vexxhost/python-base:2025.2@sha256:c6d11ddb6395e278d296ec8fabb5d61f9c862a1146c3078ccc72569294b199ba
 RUN \
     groupadd -g 42424 designate && \
     useradd -u 42424 -g 42424 -M -d /var/lib/designate -s /usr/sbin/nologin -c "Designate User" designate && \
